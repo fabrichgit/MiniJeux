@@ -625,5 +625,7 @@ function stop(result) {
         document.getElementById("menu").style.display="block";
         document.getElementById("welcome-result").innerHTML= `Vous avez perdu, tentez encore votre chance`
     }
+    mistakes=0;
+    numberTypingTrue=0;
     initWord();
 }
