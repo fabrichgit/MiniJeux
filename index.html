@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./apk.js" defer></script>
+</head>
+<body>
+    <div id="big-container3">
+        <div id="section1">
+            <div class="timer">
+                <span id="zero"></span>
+                <span id="minute"></span>
+                <span id="double"></span>
+                <span id="second1"></span>
+                <span id="second2"></span>
+            </div>
+            <div class="live"></div>
+        </div>
+    </div>
+    <div id="big-container2">
+        <img src="./chassis.png" alt="" id="carPNG1">
+        <img src="./chassis.png" alt="" id="carPNG2">
+        <img src="./chassis.png" alt="" id="carPNG3">
+        <img src="./chassis.png" alt="" id="carPNG4">
+        <div id="line1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <img src="./car-top-view.png" alt="" id="car">
+
+        <div id="line2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="big-container">
+        <div class="wordToTap">
+            <div class="content-word"></div>
+        </div>
+    </div>
+    <div id="menu">
+        <div id="welcome-result">Bienvenu sur RaceTyping</div>
+        <div id="description">
+            <p>
+                La regle du jeu est simple. Tapez chacun de lettre affiché 
+                pour accélerer le mobile jusqu'a la ligne d'arrivée.
+            </p>
+            <p>
+                <span style="text-decoration: underline;">Attention!</span> les fautes sont comptés ainsi que le temps
+            </p>
+            <p><span style="text-decoration: underline;">N.B: </span>Ne vous inquitez pas pour la majuscule, c'est incenssible a la case</p>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1.5vw;">
+            <div id="niveau">
+                <span style="font-size: 1.5vw; font-family: Arial; font-weight: bold;">Niveau: </span>
+                <span>
+                    <select name="" id="" style="padding: 0.5vw 1vw; border-radius: 20px; font-size: 1.2vw;">
+                        <option value="moyen" title="le timer sera 2min">Moyen</option>
+                        <option value="difficile" title="le timer sera 1min 30s">Difficile</option>
+                        <option value="facile" title="le timer sera 2min 30s">Facile</option>
+                    </select>
+                </span>
+            </div>
+            <span id="perso" style="font-family: Verdana; font-size: small; font-weight: bold; text-decoration: underline; cursor: pointer;">Personnalisation de niveau</span>
+        </div>
+        <div id="optionPerso" style="display: flex; gap: 10px; flex-direction: column;"></div>
+        <button id="start">Jouer</button>
+        <img src="./car-top-view.png" alt="" id="carToMenu">
+    </div>
+    
+</body>
+</html>
