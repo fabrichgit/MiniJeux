@@ -340,9 +340,23 @@ const alph= ['A','B','C','D','E',
 
 let eachLetter= document.querySelectorAll(".content-word div");
 let car= document.getElementById('car');
-let word='';
-let win=false;
+let word;
+let win;
+let mistakes;
+let numberTypingTrue;
+let persOption= false;
 
+function initGame() {
+    word='';
+    win=false;
+    mistakes=0;
+    numberTypingTrue=0;
+    persOption= false;
+
+    for(let index= 0; index<=word.length-1; index++){
+        document.getElementById(`letter${index}`).remove();
+    }
+}
 
 function getRadomElement(array) {
     let randomIndex = Math.floor(Math.random()*1000);
@@ -515,8 +529,7 @@ function runAll(rank, status) {
 
 }
 
-let mistakes=0;
-let numberTypingTrue=0;
+
 function onTyping() {
     
     window.addEventListener("keydown", (clicked)=>{
@@ -564,7 +577,7 @@ function onTyping() {
 
 }
 
-let persOption= false;
+
 document.getElementById("perso").addEventListener("click", ()=>{
     persOption = true;
     console.log(persOption);
@@ -591,8 +604,6 @@ function start(byButton) {
         let minuteInput= document.getElementById("min").value;
         let secondInput= document.getElementById("sec").value;
         let valueRank=[parseInt(minuteInput), parseInt(secondInput)];
-        console.log(persOption);
-        console.log(valueRank);
         showRadomWord();
         runAll(valueRank, persOption);
         onTyping();
@@ -612,6 +623,7 @@ function start(byButton) {
 document.getElementById("start").addEventListener("click", ()=>{
     start(persOption);
     initWord();
+    initGame();
 })
 
 function stop(result) {
