@@ -352,6 +352,7 @@ function initGame() {
     mistakes=0;
     numberTypingTrue=0;
     persOption= false;
+    document.getElementById("menu").style.display="block";
 
     for(let index= 0; index<=word.length-1; index++){
         document.getElementById(`letter${index}`).remove();
@@ -512,7 +513,7 @@ function runAll(rank, status) {
                 minutes--;
             }
             if (second.toString().length==2) {
-                document.getElementById('second1').style.display='none';
+                document.getElementById('second1').style.display= 'none';
             }else{
                 document.getElementById('second1').style.display='inline';
                 document.getElementById('second1').innerHTML= '0';
@@ -534,7 +535,7 @@ function onTyping() {
     
     window.addEventListener("keydown", (clicked)=>{
 
-        if (clicked.key==word[numberTypingTrue]) {
+        if (clicked.key.toLocaleUpperCase()==word[numberTypingTrue]) {
             document.getElementById(`letter${numberTypingTrue}`).style.color='red';
             numberTypingTrue++;
     
@@ -635,7 +636,7 @@ function stop(result) {
     }else{
         document.body.style.backgroundColor=-"red";
         document.getElementById("menu").style.display="block";
-        document.getElementById("welcome-result").innerHTML= `Vous avez perdu, tentez encore votre chance`
+        document.getElementById("welcome-result").innerHTML= `Vous avez perdu, tentez encore votre chance`;
     }
     mistakes=0;
     numberTypingTrue=0;
